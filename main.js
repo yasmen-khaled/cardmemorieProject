@@ -115,9 +115,6 @@ var checkTwoCard = function () {
  	}
 }
 
-var card = document.querySelectorAll('img')
-for (var i = 0; i < card.length; i++) {
-  card[i].setAttribute('class','color' )	
-}
+
 
 showTemplate()

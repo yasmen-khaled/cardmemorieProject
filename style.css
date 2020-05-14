@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -9,13 +10,26 @@ body{
  
 
 
+=======
+body {
+  height: 100vh;
+  background: #060AB2;
+  display: flex;
+}
+
+>>>>>>> 3aa1a65c35801e50f43638b8d6c295d99ac77713
 #template {
-	display: flex;
-	flex-wrap: wrap;
+	margin:auto;
+	display: grid;
+	grid-template-columns:repeat(4, auto);
+	grid-gap: 10px;
 	width:1050px;
-	height:1000px;
+	height: 770px;
+	perspective: 1000px;
+	justify-content: center;
 }
 #template img {
+<<<<<<< HEAD
 	width: calc(25% - 10px);
   height: calc(33.333% - 10px);
   margin: 5px;
@@ -54,3 +68,22 @@ body{
 
 
 
+=======
+  border-radius: 12px;
+  margin: 5px;
+  transform-style: preserve-3d;
+  transition: .5s;
+  width: 125px;
+  height: 175px;
+}
+#template img:active {
+  transform: scale(0.96);
+  transition: transform .2s;
+}
+.color{
+	display: none;
+}
+img.animate {
+	transform: rotateY(180deg);
+}
+>>>>>>> 3aa1a65c35801e50f43638b8d6c295d99ac77713

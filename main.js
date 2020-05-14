@@ -65,6 +65,8 @@ var cardsArray = [
 	}
 ]
  
+ cardsArray.sort(() => 0.5 - Math.random())
+
  var cardrot = [];
  var cardsArrayId = [];
  var cardMatched = []
@@ -113,8 +115,9 @@ var checkTwoCard = function () {
  	}
 }
 
-
-
+var card = document.querySelectorAll('img')
+for (var i = 0; i < card.length; i++) {
+  card[i].setAttribute('class','color' )	
+}
 
 showTemplate()
-

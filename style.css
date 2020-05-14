@@ -1,3 +1,14 @@
+
+
+
+body{
+	height: 100px;
+	display: flex;	
+}
+
+ 
+
+
 #template {
 	display: flex;
 	flex-wrap: wrap;
@@ -5,5 +16,41 @@
 	height:1000px;
 }
 #template img {
-	margin:5px;
+	width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+ position: relative;
+  display: inline-block;
+
+
+
+
 }
+
+#template img:active{
+ transform: scale(0.97);
+  transition: transform .2s;
+}
+
+
+
+
+
+.container {
+
+  display: grid;
+  grid-template-columns: repeat(4,auto);
+  grid-gap: 10px;
+  margin: 50px auto;
+  justify-content: center;
+  perspective: 500px;
+
+
+}
+
+
+

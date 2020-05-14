@@ -1,11 +1,11 @@
 var cardsArray = [
 	{
-		name: "baloon",
-		img :"images/baloon.jpg"
+		name: "Raven",
+		img :"images/Raven.png"
 	},
 	{
-		name: "baloon",
-		img :"images/baloon.jpg"
+		name: "Raven",
+		img :"images/Raven.jpg"
 	},
 	{
 		name: "boat",
@@ -71,6 +71,8 @@ var cardsArray = [
 var template = document.querySelector("#template")
 var score = document.querySelector("#score")
 
+
+cardsArray.sort(() => 0.5 - Math.random())
 var showTemplate = function (){
 	for(var i = 0; i < cardsArray.length; i++){
 		var cards = document.createElement('img');		
@@ -115,6 +117,15 @@ var checkTwoCard = function () {
 
 
 
-
 showTemplate()
+
+var card = document.querySelectorAll('img')
+
+function animateCard() {	
+		this.classList.toggle('animate')
+}
+
+card.forEach(function(card){
+	card.addEventListener('click',animateCard)
+})
 

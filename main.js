@@ -64,6 +64,9 @@ var cardsArray = [
 		img :"images/plane.jpg"
 	}
 ]
+ 
+ var cardrot = [];
+ var cardsArrayId = [];
 
 var template = document.querySelector("#template")
 
@@ -72,10 +75,24 @@ var showTemplate = function (){
 		var cards = document.createElement('img');		
 		cards.setAttribute('src',"images/back.jpg")
 		cards.setAttribute('data-id',i)
-		//card.evenListener('click',rotateCard)
+		cards.addEventListener('click',rotateCard)
 		template.appendChild(cards)
 	}
 }
+
+function rotateCard (){
+	var cardId = this.getAttribute('data-id');
+	cardrot.push(cardsArray[cardId].name)
+	cardsArrayId.push(cardId)
+	this.setAttribute('src', cardsArray[cardId].img)
+	 if(cardrot.length === 2 ){
+	 	setTimeout(checkTowCard, 500)
+
+	 }
+}
+
+
+
 
 showTemplate()
 

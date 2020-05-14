@@ -1,0 +1,9 @@
+#template {
+	display: flex;
+	flex-wrap: wrap;
+	width:1050px;
+	height:1000px;
+}
+#template img {
+	margin:5px;
+}

@@ -1,16 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
 body {
-  height: 100vh;
-  background: #060AB2;
-  display: flex;
+  background-image: url(images/bg-cherie2.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: url(images/cursor/normal.cur),auto;
 }
-
+h3 {
+	font-size: 40px;
+    color: bisque;
+    font-family: 'Alex Brush', cursive;
+    width: 40%;
+    margin: 0 auto;
+}
 #template {
 	margin:auto;
 	display: grid;
 	grid-template-columns:repeat(4, auto);
 	grid-gap: 10px;
-	width:1050px;
-	height: 770px;
+	width:65%;
+	height: 600px;
 	perspective: 1000px;
 	justify-content: center;
 }
@@ -20,15 +28,96 @@ body {
   transform-style: preserve-3d;
   transition: .5s;
   width: 125px;
-  height: 175px;
+  height: 125;
 }
 #template img:active {
   transform: scale(0.96);
-  transition: transform .2s;
+  transition:  .2s;
+}
+#template img:hover {
+  transform: scale(1.05);
+  transition:  .2s;
+  cursor: url(images/cursor/Alternative2.cur),auto;
 }
 .color{
 	display: none;
 }
-img.animate {
+.animate {
 	transform: rotateY(180deg);
+}
+.green {
+	background-color: rgb(50, 205, 50,0.6);
+	transition: .2s;
+	transform: scale(1.1);
+}
+.red {
+	background-color: rgb(255, 99, 71,0.6);
+	transition: .1s;
+	transform: scale(0.9);
+}
+.over {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	font-family: fantasy;
+	justify-content: center;
+	z-index: 100;
+	padding: 50px;
+}
+.visible {
+	display: block;
+	animation: gorwOut 500ms forwards;
+}
+.visible p {
+	color:white;
+}
+input {
+  height: 30px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: transparent;
+}
+input:focus {
+  outline: none;
+}
+input {
+	color:white;
+	font-size: 26px;
+	border-bottom: 5px solid white;
+	position: relative;
+	top: -100px;
+}
+button {
+	background-color: black;
+	color:white;
+	font-size: 20px;
+	position: relative;
+	top: -95px;
+}
+button:active {
+	transform: scale(0.9);	
+}
+
+@keyframes gorwOut {
+	from {
+		background-color: rgb(0,0,0);
+		font-size: 0em;
+	}
+	to {
+		background-color: rgb(0,0,0,0.9);
+		font-size: 6em;
+	}
+}
+@media(max-width:600px) {
+	#template {
+			grid-template-columns:repeat(2, auto);
+	}
+	body {
+		background-color: rgb(255, 105, 180,0.6)
+	}
 }
